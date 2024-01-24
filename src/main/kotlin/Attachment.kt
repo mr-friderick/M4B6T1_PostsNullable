@@ -1,24 +1,24 @@
-abstract class Attachment(val type: String)
+sealed class Attachment(val type: String) {
+    data class AudioAttachment(
+        val audio: Audio
+    ): Attachment("audio")
 
-class AudioAttachment(
-    val aObject: Audio
-): Attachment("audio")
+    data class PhotoAttachment(
+        val photo: Photo
+    ): Attachment("photo")
 
-class PhotoAttachment(
-    val aObject: Photo
-): Attachment("photo")
+    data class VideoAttachment(
+        val video: Video
+    ): Attachment("video")
 
-class VideoAttachment(
-    val aObject: Video
-): Attachment("video")
+    data class FileAttachment(
+        val file: File
+    ): Attachment("file")
 
-class FileAttachment(
-    val aObject: File
-): Attachment("file")
-
-class StickerAttachment(
-    val aObject: Sticker
-): Attachment("sticker")
+    data class StickerAttachment(
+        val sticker: Sticker
+    ): Attachment("sticker")
+}
 
 data class Audio(
     val id: Int,

@@ -1,7 +1,7 @@
 fun main() {
     var arrayAttachment = arrayOf<Attachment>()
-    arrayAttachment += PhotoAttachment(Photo(0, "text"))
-    arrayAttachment += VideoAttachment(Video(0, "title", "description"))
+    arrayAttachment += Attachment.PhotoAttachment(Photo(0, "text"))
+    arrayAttachment += Attachment.VideoAttachment(Video(0, "title", "description"))
 
     val newPost = Post(
         0,

@@ -14,8 +14,8 @@ class WallServiceTest {
     @Test
     fun add() {
         var arrayAttachment = arrayOf<Attachment>()
-        arrayAttachment += PhotoAttachment(Photo(0, "text"))
-        arrayAttachment += VideoAttachment(Video(0, "title", "description"))
+        arrayAttachment += Attachment.PhotoAttachment(Photo(0, "text"))
+        arrayAttachment += Attachment.VideoAttachment(Video(0, "title", "description"))
 
         val post = Post(
             0,
@@ -34,8 +34,8 @@ class WallServiceTest {
     @Test
     fun updateTrue() {
         var arrayAttachment = arrayOf<Attachment>()
-        arrayAttachment += PhotoAttachment(Photo(0, "text"))
-        arrayAttachment += VideoAttachment(Video(0, "title", "description"))
+        arrayAttachment += Attachment.PhotoAttachment(Photo(0, "text"))
+        arrayAttachment += Attachment.VideoAttachment(Video(0, "title", "description"))
 
         val firstPost = Post(
             0,
@@ -67,8 +67,8 @@ class WallServiceTest {
     @Test
     fun updateFalse() {
         var arrayAttachment = arrayOf<Attachment>()
-        arrayAttachment += PhotoAttachment(Photo(0, "text"))
-        arrayAttachment += VideoAttachment(Video(0, "title", "description"))
+        arrayAttachment += Attachment.PhotoAttachment(Photo(0, "text"))
+        arrayAttachment += Attachment.VideoAttachment(Video(0, "title", "description"))
 
         val firstPost = Post(
             0,
