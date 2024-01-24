@@ -1,3 +1,10 @@
+/*
+В подсказе задачи 3 в строке
+val attachment: Attachment = VideoAttachment("stuff")
+вроде бы ошибка, т.к. параметром класс VideoAttachment принимает объект типа Video, а не String.
+Если не прав - объясните пожалуйста
+*/
+
 sealed class Attachment(val type: String) {
     data class AudioAttachment(
         val audio: Audio
